@@ -1,0 +1,51 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@app/hooks": ["src/app/shared/hooks"],
+      "@app/hooks/*": ["src/app/shared/hooks/*"],
+      "@app/components/*": ["src/app/shared/components/*"],
+      "@app/helpers/*": ["src/app/shared/helpers/*"],
+      "@app/*": ["src/app/*"],
+      "@entities": ["src/models/entities"],
+      "@entities/*": ["src/models/entities/*"],
+      "@exceptions/*": ["src/models/exceptions/*"],
+      "@exceptions": ["src/models/exceptions"],
+      "@models/*": ["src/models/*"],
+      "@api": ["src/infrastructure/api"],
+      "@api/*": ["src/infrastructure/api/*"],
+      "@ui/*": ["src/infrastructure/ui/*"],
+      "@translation": ["src/infrastructure/translation"],
+      "@infrastructure/*": ["src/infrastructure/*"]
+    },
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "src",
+    "src/*",
+    "node_modules/vitest/globals.d.ts"
+  ]
+}
